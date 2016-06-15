@@ -1,0 +1,18 @@
+"*":
+  core:
+    disabledPackages: [
+      "atomic-emacs"
+    ]
+    themes: [
+      "one-dark-ui"
+      "monokai-solarized-dark"
+    ]
+".c2hs.source":
+  editor:
+    autoIndent: false
+editor:
+  tabLength: 4
+"exception-reporting":
+  userId: "3f85e02f-3fab-5b27-e646-2f272c1ca901"
+welcome:
+  showOnStartup: false
