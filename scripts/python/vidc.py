@@ -11,7 +11,7 @@ def main():
     
     if not len(sys.argv) == 5:
         print("Invalid number of arguments. ")
-        print("format: python vidc.py <HH:MM:SS.0> <HH:MM:SS.0> <in_file> <out_file>")
+        print("format: python vidc.py <HH:MM:SS.0> <Time> <in_file> <out_file>")
         exit(0)
 
     args = sys.argv
