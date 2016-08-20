@@ -16,11 +16,3 @@ main = do args <- getArgs
           
           hClose oldFileHandle
           hClose backupFileHandle
-
-          
-
-
-
-
-    
-
