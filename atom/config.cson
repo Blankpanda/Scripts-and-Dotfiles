@@ -2,11 +2,18 @@
   core:
     disabledPackages: [
       "atomic-emacs"
+      "python-tools"
     ]
     themes: [
-      "one-dark-ui"
-      "monokai-solarized-dark"
+      "atom-dark-ui"
+      "no-caffeine-syntax"
     ]
+  editor:
+    fontSize: 13
+  "exception-reporting":
+    userId: "baf3ecc4-87a6-ee77-2673-3905e8baeb9b"
+  welcome:
+    showOnStartup: false
 ".c2hs.source":
   editor:
     autoIndent: false
