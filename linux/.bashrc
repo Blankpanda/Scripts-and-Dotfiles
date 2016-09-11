@@ -87,6 +87,11 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+function mdd() {
+    mkdir -p && cd $1
+}
+
+
 # some more ls aliases
 #alias ll='ls -l'
 #alias la='ls -A'
@@ -114,3 +119,14 @@ fi
 
 # added by Anaconda3 4.0.0 installer
 export PATH="/home/caleb/anaconda3/bin:$PATH"
+
+function 4chanimages()
+{
+curl -s http://boards.4chan.org/wg/|sed -r 's/.*href="([^"]*).*/\1\n/g'|grep images|xargs wget
+}
+
+function colors2nums()
+{
+for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
+}
+
