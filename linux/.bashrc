@@ -88,7 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 function mdd() {
-    mkdir -p && cd $1
+    mkdir $1 -p && cd $1
 }
 
 
@@ -130,3 +130,28 @@ function colors2nums()
 for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
 }
 
+function cdl()
+{
+builtin cd "$@" && ls -F
+}
+
+function cpcd()
+{
+ cp -r $1 $2 && cd $2
+}
+
+function startCups()
+{
+    sudo /etc/init.d/cups start
+}
+
+function stopCups()
+{
+    sudo /etc/init.d/cups stop
+}
+
+function switchToXfce()
+{
+    sudo killall xmonad-x86_64-linux
+    sudo xfwm4
+}
