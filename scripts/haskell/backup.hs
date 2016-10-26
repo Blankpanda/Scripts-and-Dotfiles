@@ -12,7 +12,15 @@ main = do args <- getArgs
           backupFileHandle <- createBackup ((head args) ++ ".bak")
           contents <- hGetContents oldFileHandle
           putStr contents
-          hPutStrLn backupFileHandle contents
+          hPutStr backupFileHandle contents
           
           hClose oldFileHandle
           hClose backupFileHandle
+
+          
+
+
+
+
+    
+
