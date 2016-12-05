@@ -153,5 +153,28 @@ function stopCups()
 function switchToXfce()
 {
     sudo killall xmonad-x86_64-linux
-    sudo xfwm4
+    sudo nohup xfwm4
+}
+
+function msw() {
+    path=~/Documents/School
+    if [ -f ~/*.docx ]
+    then
+       mv ~/*.docx $path
+    fi
+
+    if [  -f ~/*.doc ]
+    then
+       mv ~/*.doc $path
+    fi
+
+    if [  -f ~/*.zip ]
+    then
+       mv ~/*.zip $path
+    fi
+
+    if [  -f ~/*.odt ]
+    then
+         mv ~/*.odt $path
+    fi
 }
