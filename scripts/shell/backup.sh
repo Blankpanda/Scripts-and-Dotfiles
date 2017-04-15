@@ -1,3 +1,8 @@
 #!/bin/sh
-dir=$1 # the directory
-cp -r $dir /backup/
+for var in "$@"
+do
+    echo "backing up $var"
+    sleep 2
+    cp --verbose -r $var /backup/
+done
+
