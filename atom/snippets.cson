@@ -24,3 +24,7 @@
     "for alert":
         'prefix': 'fora'
         'body': "for(var i = 0; i < $1.length; i++) { \n alert($1[i]); \n}"
+'.text.plain':
+  'Markdown table':
+    'prefix': 'mdtable'
+    'body': "| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | $1600 |\n| col 2 is      | centered      |   $12 |\n| zebra stripes | are neat      |    $1 |"
