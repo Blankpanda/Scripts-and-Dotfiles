@@ -30,5 +30,8 @@
     'body': "| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | $1600 |\n| col 2 is      | centered      |   $12 |\n| zebra stripes | are neat      |    $1 |"
 '.source.asp':
   'Response.End':
-    'prefix': 're'
+    'prefix': 'r.e'
     'body': 'Response.End'
+  'Response.Write with br':
+    'prefix': 'r.wbr'
+    'body': 'Response.write $1 & "<br/>"'
