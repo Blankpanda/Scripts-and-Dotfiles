@@ -28,3 +28,7 @@
   'Markdown table':
     'prefix': 'mdtable'
     'body': "| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | $1600 |\n| col 2 is      | centered      |   $12 |\n| zebra stripes | are neat      |    $1 |"
+'.source.asp':
+  'Response.End':
+    'prefix': 're'
+    'body': 'Response.End'
