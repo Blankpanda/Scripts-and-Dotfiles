@@ -35,3 +35,6 @@
   'Response.Write with br':
     'prefix': 'r.wbr'
     'body': 'Response.write $1 & "<br/>"'
+  'Response.form foreach':
+    'prefix': 'iter.rf'
+    'body': 'For each req in Request.Form\n\tResponse.Write \"Key: \" & req & \" - Value:" & Request.Form(req) & \"<br/>\"\nNext\nResponse.write \"<hr>\"'
