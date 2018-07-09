@@ -38,3 +38,9 @@
   'Response.form foreach':
     'prefix': 'iter.rf'
     'body': 'For each req in Request.Form\n\tResponse.Write \"Key: \" & req & \" - Value:" & Request.Form(req) & \"<br/>\"\nNext\nResponse.write \"<hr>\"'
+  'stored procedure':
+    'prefix': 'spr.oc'
+    'body': 'Set oParams = CreateObject("Scripting.Dictionary")\noParams.Add "$3",$4\nSet oResponse = $1.GetProcedureData("$2",oParams) \' oEvent'
+  'CDO email':
+    'prefix': 'mail.CDO'
+    'body':'Set objCDO = Server.CreateObject("CDO.Message")\nobjCDO.From = ShowName & GLOBAL_FromEmailAddress\nobjCDO.To = email(x)\nobjCDO.Subject = "Registration Confirmation - $1"\nobjCDO.AutoGenerateTextBody =False\nIf InStr(strExTempMsg, "<html>") > 0 then\n\tobjCDO.HTMLBody = $2\nElse\n\tobjCDO.TextBody = $3\nEnd If\nret = SendMail(objCDO)\nset objCDO = Nothing'
