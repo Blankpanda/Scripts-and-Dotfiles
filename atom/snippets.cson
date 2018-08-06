@@ -24,10 +24,18 @@
     "for alert":
         'prefix': 'fora'
         'body': "for(var i = 0; i < $1.length; i++) { \n alert($1[i]); \n}"
-'.text.plain':
+'.source.md':
   'Markdown table':
     'prefix': 'mdtable'
     'body': "| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | $1600 |\n| col 2 is      | centered      |   $12 |\n| zebra stripes | are neat      |    $1 |"
+'.source.html':
+  'print and break':
+    'prefix': 'pbr'
+    'body': '<p>$1</p><br/>'
+  'click here href':
+    'prefix': 'click.a'
+    'body': "<a href='$1'>click here</a>"
+
 '.source.asp':
   'Response.End':
     'prefix': 'r.e'
@@ -44,3 +52,12 @@
   'CDO email':
     'prefix': 'mail.CDO'
     'body':'Set objCDO = Server.CreateObject("CDO.Message")\nobjCDO.From = ShowName & GLOBAL_FromEmailAddress\nobjCDO.To = email(x)\nobjCDO.Subject = "Registration Confirmation - $1"\nobjCDO.AutoGenerateTextBody =False\nIf InStr(strExTempMsg, "<html>") > 0 then\n\tobjCDO.HTMLBody = $2\nElse\n\tobjCDO.TextBody = $3\nEnd If\nret = SendMail(objCDO)\nset objCDO = Nothing'
+  'API not response':
+     'prefix': 'if.not'
+     'body': 'If not oResponse.data.length = 0 Then\n\t\nend if\n'
+  'print and break':
+      'prefix': 'pbr'
+      'body': '<p>$1</p><br/>'
+  'click here href':
+      'prefix': 'click.a'
+      'body': "<a href='$1'>click here</a>"
